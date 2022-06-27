@@ -6,7 +6,8 @@ import Button from "@mui/material/Button";
 import Link from "@mui/material/Link";
 import Paper from "@mui/material/Paper";
 
-function Home() {
+
+export default function Main() {
 
     const dogBreedFinderDetails = (
         <Box>
@@ -18,7 +19,7 @@ function Home() {
                 You can download the Android application or visit the website for demo below.
             </Box>
             <Link
-                href={"https://play.google.com/store/apps/details?id=com.devitizen.whatdog&hl=en&gl=US"}
+                href={"https://play.google.com/store/apps/details?id=com.devitizen.whatdog"}
                 target="_blank"
                 underline="none"
             >
@@ -40,10 +41,35 @@ function Home() {
                     size="small"
                     sx={{ mt: 3, ml: 1, color: "grey.400", borderColor: "grey.400" }}
                 >
-                    Demo Site
+                    Web Site
                 </Button>
             </Link>
+        </Box>
+    );
 
+    const flyToFruitsDetails = (
+        <Box>
+            <Box> 
+                Android mobile game where players control a bird to get a higher score 
+                by getting fruits and passing through electrical poles as much as possible. 
+                The players can tap to flap and swipe to fly the bird and have three chances for one game.
+            </Box>
+            <Box sx={{ mt: 1 }}>
+                You can download this free game from Google Play.
+            </Box>
+            <Link
+                href={"https://play.google.com/store/apps/details?id=com.devitizen.flytofruits"}
+                target="_blank"
+                underline="none"
+            >
+                <Button
+                    variant="outlined"
+                    size="small"
+                    sx={{ mt: 3 }}
+                >
+                    Google Play
+                </Button>
+            </Link>
         </Box>
     );
 
@@ -53,8 +79,8 @@ function Home() {
             <Box
                 sx={{
                     textAlign: "center",
-                    pt: 5,
-                    pb: 12,
+                    pt: 4,
+                    pb: 10,
                     fontWeight: 600,
                     borderBottom: 0.5,
                     borderColor: "grey.300",
@@ -73,7 +99,7 @@ function Home() {
                 </Box>
             </Box>
 
-            <Box sx={{ mt: 8 }}>
+            <Box sx={{ mt: 4 }}>
                 <Box sx={{ fontSize: [22, 26, 30], fontWeight: 600, py: [2, 3, 4], ml: [0, 3, 5] }}>
                     The works I did<br />and make you happier.
                 </Box>
@@ -88,9 +114,9 @@ function Home() {
                     <GridItem component={
                         <Box sx={{mt: [1, 2, 4]}}>
                             <Work
-                                image={"/images/inDevelopment.png"}
-                                title={"New Product"}
-                                details={<Box> Now, Devitizen is working on something that makes you smile.</Box>}
+                                image={"/images/flyToFruits.png"}
+                                title={"Fly to Fruits"}
+                                details={flyToFruitsDetails}
                             />
                         </Box>
                     } />
@@ -100,7 +126,6 @@ function Home() {
     );
 }
 
-export default Home;
 
 function GridItem(props) {
     return (
