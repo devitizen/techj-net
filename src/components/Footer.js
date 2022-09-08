@@ -22,10 +22,12 @@ function Footer() {
         transform: "translate(-50%, -50%)",
         width: 400,
         bgcolor: "background.paper",
-        border: "2px solid #000",
-        boxShadow: 24,
-        p: 4,
-        fontSize: 14
+        border: "1px solid #000",
+        boxShadow: 12,
+        py: 4,
+        fontSize: 14,
+        fontFamily: "Noto Sans",
+        textAlign: "center",
     };
 
     return (
@@ -57,16 +59,15 @@ function Footer() {
                 aria-describedby="modal-modal-description"
             >
                 <Box sx={modalStyle}>
-                    <Box>This website uses wonderful icons from</Box>
-                    <Box sx={{ mt: 1}}>
+                    <Box sx={{ mt: 1 }}>
                         <a
                             href="https://www.flaticon.com/free-icons/hello"
                             title="hello icons"
-                        >
-                            Hello icons created by Freepik - Flaticon
+                        >   
+                            Hello icons created by Freepik - Flaticon   
                         </a>
                     </Box>
-                    <Box sx={{ mt: 4, textAlign: "center" }}>
+                    <Box sx={{ mt: 4 }}>
                         <Button
                             variant="outlined"
                             size="small"

@@ -1,6 +1,7 @@
-import React from "react";
+import { React, useEffect } from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import Container from "@mui/material/Container";
+import WebFont from "webfontloader";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -9,6 +10,14 @@ import PrivacyFTF from "./components/PrivacyFTF";
 import PrivacyMD from "./components/PrivacyMD";
 
 export default function App() {
+    useEffect(() => {
+        WebFont.load({
+          google: {
+            families: ["Noto Sans", "sans-serif"]
+          }
+        });
+      }, []);
+
     return (
         <HashRouter>
             <Routes>
@@ -22,7 +31,9 @@ export default function App() {
 
 function Home() {
     return (
-        <Container>
+        <Container
+            sx={{fontFamily: "Noto Sans"}}
+        >
             <Header />
             <Main />
             <Footer />
